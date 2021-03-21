@@ -196,7 +196,7 @@ void introduce_task()
                     "is the church.\n\n"+WE+" At certain levels you will be required to find a special trainer. Also, you will gain "+
                     "skill points as you level and every four levels you will gains a stat point, which can powerfully increase "+
                     "your character. When you are ready simply %^YELLOW%^explain stats%^RESET%^, %^YELLOW%^explain skills%^RESET%^, "+
-                    "and %^YELLOW%^explain advance%^RESET%^.");
+                    "and %^YELLOW%^explain advance%^RESET%^. If I'm being stubborn, just try %^YELLOW%^explain%^RESET%^ without an argument.");
                     break;
                 case 3:
                     if(member_array("Sirith's Task",TP->query_quests()) != -1)
@@ -223,7 +223,7 @@ void introduce_task()
                     tell_object(ETO, "\n"+WE+" The third task is an equally important one as well. "+
                     "However, before we get to that. There are some other things that you need to know about "+
                     "yourself, your equipment, and moving around. First off, you will get hungry and thirsty on "+
-                    "Shadowgate. If you do not eat or drink, you can die, slowly and painfully.... \n\n"+WE+
+                    "Sundering Shadows. If you do not eat or drink, you can die, slowly and painfully.... \n\n"+WE+
                     " Your equipment, it can and will break. Eventually it will be useless to you, however, most "+
                     "merchants have the ability to repair any item that they will also buy. Also, as you explore "+
                     "the world you will learn that there are many ways of moving around.\n\n"+WE+" When "+
@@ -266,7 +266,7 @@ void introduce_task()
                     "They are called fences. They will launder any coins or any items of value that you "+
                     "%^YELLOW%^steal%^RESET%^ from unsuspecting others.\n\n"+WE+" I do not have a task for you related "+
                     "to them but I do wish to explain some of their functionality. When you are ready simply "+
-                    "%^YELLOW%^explain fence%^RESET%^ and %^YELLOW%^explain guilds.%^RESET%^");
+                    "%^YELLOW%^explain fence%^RESET%^ and %^YELLOW%^explain guilds. If I'm being stubborn, just try %^YELLOW%^explain%^RESET%^ without an argument.%^RESET%^");
                     return;
                     break;
                 case 3:
@@ -286,7 +286,7 @@ void introduce_task()
                     "role of your character, its attributes, skills, and ambitions. You should leave "+
                     "those of your own behind.\n\n"+WE+" When you are ready to continue simply "+
                     "%^YELLOW%^explain quest areas%^RESET%^, %^YELLOW%^explain rumors%^RESET%^, and "+
-                    "%^YELLOW%^explain roleplay.%^RESET%^");
+                    "%^YELLOW%^explain roleplay. If I'm being stubborn, just try %^YELLOW%^explain%^RESET%^ without an argument.%^RESET%^");
                     break;
                 case 3:
                     tmpquests = ETO->query_mini_quests();
@@ -317,13 +317,13 @@ void introduce_task()
                     tell_object(ETO, "\n"+WE+" You have completed all of the tasks that I have for you "+
                     "now there is just a little more information that you must be made aware of. \n\n"+
                     WE+" When you are ready %^YELLOW%^explain church%^RESET%^, %^YELLOW%^explain "+
-                    "description%^RESET%^, and %^YELLOW%^explain adjective%^RESET%^.\n");
+                    "description%^RESET%^, and %^YELLOW%^explain adjective%^RESET%^. If I'm being stubborn, just try %^YELLOW%^explain%^RESET%^ without an argument.\n");
                     break;
                 case 3:
                     if(newbiep(ETO))
                     {
                         tell_object(ETO, "\n"+WE+" Very well, I believe that you are ready. When you are ready "+
-                        "for your final step before being moved into the greater world of Shadowgate "+
+                        "for your final step before being moved into the greater world of Sundering Shadows "+
                         "%^YELLOW%^explain enter the world%^RESET%^\n");
                     }
                     else
@@ -568,14 +568,14 @@ int explain_act(string str)
     }
     else if(strsrch(str, "church") != -1 && myTask >= 6)
     {
-        tell_object(ETO, "\n"+WE+" Churches and temples are very important in the world of Shadowgate. "+
+        tell_object(ETO, "\n"+WE+" Churches and temples are very important in the world of Sundering Shadows. "+
         "You may have already used them to %^YELLOW%^advance%^RESET%^ or return to them when "+
         "you have died and met Kelemvor.\n\n"+WE+" However, they serve other important purposes. From "+
         "within a church or temple you can %^YELLOW%^read sign%^RESET%^ to get more information. \n\n"+WE+
         " From within a temple you can %^YELLOW%^read charge%^RESET%^ to get information about the specific "+
         "deity of that temple. \n\n"+WE+" One very important ability that is available within a church or "+
         "temple is %^YELLOW%^identify curse on <object>%^RESET%^. This is important because as you find equipment "+
-        "in the world of Shadowgate, a lot of it will be magically enchanted. \n\n"+WE+" Sometimes this enchantment "+
+        "in the world of Sundering Shadows, a lot of it will be magically enchanted. \n\n"+WE+" Sometimes this enchantment "+
         "will be %^RED%^cursed%^RESET%^ and if you equip such equipment it will cost much gold for you to "+
         "remove it. \n\n"+WE+" Always remember this when finding something new that looks interesting, less "+
         "you find yourself cursed.%^RESET%^");
